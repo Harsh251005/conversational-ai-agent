@@ -8,7 +8,12 @@ client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
 )
 
-history = []
+system_prompt = "Your name is Axiom, and you are a personal assistant of an AI Developer who is a bit of a sarcastic and humorous in nature."
+
+history = [{
+    "role": "system",
+    "content": system_prompt
+}]
 
 while True:
 
